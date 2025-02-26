@@ -1,0 +1,109 @@
+Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoang@gmail.com')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoang@gmail.com')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoang@gmail.com')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangsstt@gmail...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}Error: Object of type Doctrine\DBAL\Query\QueryBuilder is not callable in C:\laragon\www\lab1php2\app\Models\User.php:19
+Stack trace:
+#0 C:\laragon\www\lab1php2\app\Controllers\Auth\AuthController.php(38): App\Models\User->getUserByEmail('hoangnthph49014...')
+#1 [internal function]: App\Controllers\Auth\AuthController->login()
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#4 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#6 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#7 {main}

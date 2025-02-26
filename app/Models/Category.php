@@ -8,12 +8,42 @@ class Category extends Model
 {
     protected $tableName = 'categories';
 
-    public function all()
+    public function getCategoryOnlyActive(){
+        $queryBuilder = $this->connection->createQueryBuilder();
+
+        $queryBuilder 
+        ->select('*')
+        ->from($this->tableName)
+        ->where('is_active = 1');
+
+        return $queryBuilder->fetchAllAssociative();
+    }
+
+    public function checkExistsNameForCreate($name)
     {
-        $qb = $this->connection->createQueryBuilder();
+        $queryBuilder = $this->connection->createQueryBuilder();
 
-        $stmt = $qb->select('*')->from($this->tableName);
+        $queryBuilder->select('COUNT(*)')
+            ->from($this->tableName)
+            ->where('name = :name')
+            ->setParameter('name', $name);
 
-        return $stmt->fetchAllAssociative();
+        $result = $queryBuilder->fetchOne();
+
+        return $result > 0;
+    }
+
+    public function checkExistsNameForUpdate($id, $name){
+        $queryBuilder = $this->connection->createQueryBuilder();
+
+        $queryBuilder->select('COUNT(*)')
+        ->from($this->tableName)
+        ->where('name = :name')
+        ->andWhere('id != :id')
+        ->setParameter('name', $name)
+        ->setParameter('id', $id);
+        $result = $queryBuilder->fetchOne();
+
+        return $result > 0;
     }
 }

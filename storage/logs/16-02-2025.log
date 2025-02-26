@@ -1,0 +1,9 @@
+Error: Call to undefined method App\Controllers\Admin\UserController::validate() in C:\laragon\www\lab1php2\app\Controllers\Admin\UserController.php:57
+Stack trace:
+#0 [internal function]: App\Controllers\Admin\UserController->store()
+#1 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#2 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#3 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 C:\laragon\www\lab1php2\routers\index.php(10): Bramus\Router\Router->run()
+#5 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#6 {main}

@@ -6,60 +6,71 @@ use App\Model;
 
 class Product extends Model
 {
-    protected $tableName = 'products';
+  protected $tableName = 'products';
 
-    public function all()
-    {
-        $qb = $this->connection->createQueryBuilder();
+  public function find($id){
 
-        $stmt = $qb->select(
-            'p.id',
-            'p.name',
-            'p.img_thumbnail',
-            'p.created_at',
-            'p.updated_at',
-            'c.name c_name'
+    $queryBuilder = $this->connection->createQueryBuilder();
+    $queryBuilder
+    ->select(
+      'p.id                   p_id',
+      'p.category_id          p_category_id',
+      'p.name                 p_name',
+      'c.name                 c_name',
+      'p.slug                 p_slug',
+      'p.img_thumbnail        p_img_thumbnail',
+      'p.overview             p_overview',
+      'p.content              p_content',
+      'p.price                p_price',
+      'p.price_sale           p_price_sale',
+      'p.is_sale              p_is_sale',
+      'p.is_active            p_is_active',
+      'p.is_show_home         p_is_show_home',
+      'p.created_at           p_created_at',
+      'p.updated_at           p_updated_at'
+    )
+    ->from($this->tableName,'p')
+    ->innerJoin('p', 'categories', 'c', 'c.id = p.category_id')
+    ->where('p.id = :id')
+    ->setParameter('id', $id);
 
-        )
-            ->from($this->tableName, 'p')
-            ->join('p', 'categories', 'c', 'p.category_id = c.id');
+    return $queryBuilder->fetchAssociative();
+  }
 
-        return $stmt->fetchAllAssociative();
-    }
+  public function paginate($page = 1, $limit = 1)
+  {
 
-    public function find($id)
-    {
-        $qb = $this->connection->createQueryBuilder();
+    $offset = ($page - 1) * $limit;
 
-        $stmt = $qb->select(
-            'p.id',
-            'p.category_id',
-            'p.name',
-            'p.img_thumbnail',
-            'p.description',
-            'p.created_at',
-            'p.updated_at',
-            'c.name c_name'
+    $queryBuilder = $this->connection->createQueryBuilder();
+    $queryBuilder
+      ->select(
+        'p.id                   p_id',
+        'p.name                 p_name',
+        'c.name                 c_name',
+        'p.img_thumbnail        p_img_thumbnail',
+        'p.price                p_price',
+        'p.price_sale           p_price_sale',
+        'p.is_sale              p_is_sale',
+        'p.is_active            p_is_active',
+        'p.is_show_home         p_is_show_home',
+        'p.created_at           p_created_at',
+        'p.updated_at           p_updated_at'
+      )
+      ->from($this->tableName, 'p')
+      ->innerJoin('p', 'categories', 'c', 'c.id = p.category_id')
+      ->orderBy('p.id', 'DESC')
+      ->setFirstResult($offset)
+      ->setMaxResults($limit);
 
-        )
-            ->from($this->tableName, 'p')
-            ->join('p', 'categories', 'c', 'p.category_id = c.id')
-            ->where('p.id = :id')
-            ->setParameter('id', $id);
+    $data = $queryBuilder->fetchAllAssociative();
+    $totalPage = ceil($this->count() / $limit); //lam tron ceil("tong so sp"/"so sp tren moi trang")
 
-        return $stmt->fetchAssociative();
-    }
-
-    public function add($data)
-    {
-        $this->connection->insert($this->tableName,$data);
-    }
-    public function update($id, $data)
-    {
-        $this->connection->update($this->tableName,$data,['id'=>$id]);
-    }
-    public function delete($id)
-    {
-        $this->connection->delete($this->tableName,['id'=>$id]);
-    }
+    return [
+      'data' => $data,
+      'page' => $page,
+      'limit' => $limit,
+      'totalPage' => $totalPage
+    ];
+  }
 }

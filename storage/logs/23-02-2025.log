@@ -1,0 +1,355 @@
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'products.category_id' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(518): Doctrine\DBAL\Connection->executeStatement('INSERT INTO pro...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(79): Doctrine\DBAL\Connection->insert('products', Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(82): App\Model->insert(Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->store()
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'products.category_id'
+ in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(518): Doctrine\DBAL\Connection->executeStatement('INSERT INTO pro...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(79): Doctrine\DBAL\Connection->insert('products', Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(82): App\Model->insert(Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->store()
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\UniqueConstraintViolationException: An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 
+1062 Duplicate entry '3' for key 'products.category_id' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:49
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'INSERT INTO pro...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(518): Doctrine\DBAL\Connection->executeStatement('INSERT INTO pro...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(79): Doctrine\DBAL\Connection->insert('products', Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(82): App\Model->insert(Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->store()
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('10', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('10')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php:55
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(55): PDOStatement->execute()
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:24
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\PDO\Statement.php(57): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(882): Doctrine\DBAL\Driver\PDO\Statement->execute()
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#5 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#6 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#9 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#10 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#11 {main}
+
+Next Doctrine\DBAL\Exception\InvalidFieldNameException: An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'img_product' in 'field list' in C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:52
+Stack trace:
+#0 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1414): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#1 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(1356): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), Object(Doctrine\DBAL\Query))
+#2 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(888): Doctrine\DBAL\Connection->convertExceptionDuringQuery(Object(Doctrine\DBAL\Driver\PDO\Exception), 'UPDATE products...', Array, Array)
+#3 C:\laragon\www\lab1php2\vendor\doctrine\dbal\src\Connection.php(487): Doctrine\DBAL\Connection->executeStatement('UPDATE products...', Array, Array)
+#4 C:\laragon\www\lab1php2\app\Model.php(87): Doctrine\DBAL\Connection->update('products', Array, Array)
+#5 C:\laragon\www\lab1php2\app\Controllers\Admin\ProductController.php(176): App\Model->update('13', Array)
+#6 [internal function]: App\Controllers\Admin\ProductController->update('13')
+#7 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('App\\Controllers...', Array)
+#9 C:\laragon\www\lab1php2\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\laragon\www\lab1php2\routers\index.php(11): Bramus\Router\Router->run()
+#11 C:\laragon\www\lab1php2\index.php(9): require('C:\\laragon\\www\\...')
+#12 {main}

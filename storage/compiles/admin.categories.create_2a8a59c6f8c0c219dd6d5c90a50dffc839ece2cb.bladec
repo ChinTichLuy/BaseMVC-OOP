@@ -1,0 +1,66 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ <?php echo \htmlentities($title??'', ENT_QUOTES, 'UTF-8', false); ?>
+
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+ <nav aria-label="breadcrumb">
+ <ol class="breadcrumb">
+ <li class="breadcrumb-item"><a href="#">Home</a></li>
+ <li class="breadcrumb-item active" aria-current="page"><?php echo \htmlentities($title??'', ENT_QUOTES, 'UTF-8', false); ?></li>
+ </ol>
+ </nav>
+
+ <h1 class="h2"><?php echo \htmlentities($title??'', ENT_QUOTES, 'UTF-8', false); ?></h1>
+
+ <?php echo $this->runChild('admin.components.display-msg-fail'); ?>
+ <?php echo $this->runChild('admin.components.display-msg-success'); ?>
+ <?php echo $this->runChild('admin.components.display-errors'); ?>
+
+ <div class="row">
+ <div class="col-12 mb-4 mb-lg-0">
+ <div class="card">
+ <div class="card-body">
+ <div class="container">
+ <form action="/admin/categories/store" method="POST" enctype="multipart/form-data">
+ <div class="mb-3 row">
+ <label for="name" class="col-4 col-form-label">Name</label>
+ <div class="col-8">
+ <input type="text" class="form-control" name="name" id="name"
+ value="<?php echo \htmlentities($_SESSION['data']['name'] ?? null??'', ENT_QUOTES, 'UTF-8', false); ?>" placeholder="Name..." />
+ </div>
+ </div>
+ <div class="mb-3 row">
+ <label for="img" class="col-4 col-form-label">Image</label>
+ <div class="col-8">
+ <input type="file" class="form-control" name="img" id="img"/>
+ </div>
+ </div>
+ <div class="mb-3 row">
+ <label for="is_active" class="col-4 col-form-label">Active</label>
+ <div class="col-8">
+ <input type="checkbox" class="form-checkbox" value="1" name="is_active" id="is_active"/>
+ </div>
+ </div>
+ 
+ <div class="mb-3 row">
+ <div class="offset-sm-4 col-sm-8">
+ <button type="submit" class="btn btn-primary">
+ Submit
+ </button>
+
+ <a href="/admin/categories" class="btn btn-warning">
+ Back to list
+ </a>
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+ <?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('admin.layouts.main'); } ?>

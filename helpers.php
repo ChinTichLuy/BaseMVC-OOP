@@ -2,16 +2,30 @@
 
 use eftec\bladeone\BladeOne;
 
-if (!function_exists('view')) {
-    function view($view, $data = [])
+if (!function_exists('middleware_auth')) {
+    function  middleware_auth()
     {
-        $views = __DIR__ . '/views';
-        $cache = __DIR__ . '/storage/compiles';
+        $currentUrl = $_SERVER['REQUEST_URI'];
+        $authRegex = '/^\/(auth|login|register)$/';
+        $adminUrlRegex = '/^\/admin/';
 
-        // MODE_DEBUG allows to pinpoint troubles.
-        $blade = new BladeOne($views, $cache, BladeOne::MODE_DEBUG);
+        if (empty($_SESSION['user'])) {
+            if (
+                !preg_match($authRegex, $currentUrl)
+                && preg_match($adminUrlRegex, $currentUrl)
+            ) {
+                redirect('/auth');
+            }
+        } else {
+            if (preg_match($authRegex, $currentUrl)) {
+                $redirectTo = ($_SESSION['user']['type'] == 'admin') ? '/admin' : '/';
+                redirect($redirectTo);
+            }
 
-        echo $blade->run($view, $data);
+            if (preg_match($adminUrlRegex, $currentUrl) && $_SESSION['user']['type'] != 'admin') {
+                redirect('/');
+            }
+        }
     }
 }
 
@@ -38,35 +52,15 @@ if (!function_exists('redirect404')) {
     }
 }
 
-if (!function_exists('middleware_auth')) {
-    function middleware_auth()
+if (!function_exists('view')) {
+    function view($view, $data = [])
     {
-        $currentUrl = $_SERVER['REQUEST_URI'];
-        $authRegex = '/^\/(auth|login|register)$/';
-        $adminUrlRegex = '/^\/admin/';
+        $views = __DIR__ . '/views';
+        $cache = __DIR__ . '/storage/compiles';
 
-        // Nếu người dùng chưa đăng nhập
-        if (empty($_SESSION['user'])) {
+        $blade = new BladeOne($views, $cache, BladeOne::MODE_DEBUG);
 
-            // Chuyển hướng trang
-            if (
-                !preg_match($authRegex, $currentUrl)
-                && preg_match($adminUrlRegex, $currentUrl)
-            ) {
-                redirect('/auth');
-            }
-        } else {
-            // Nếu người dùng đã đăng nhập và đang truy cập trang đăng nhập, đăng ký
-            if (preg_match($authRegex, $currentUrl)) {
-                $redirectTo = ($_SESSION['user']['type'] == 'admin') ? '/admin' : '/';
-                redirect($redirectTo);
-            }
-
-            // Kiểm tra quyền truy cập vào trang admin
-            if (preg_match($adminUrlRegex, $currentUrl) && $_SESSION['user']['type'] != 'admin') {
-                redirect('/');
-            }
-        }
+        echo $blade->run($view, $data);
     }
 }
 
@@ -76,7 +70,6 @@ if (!function_exists('file_url')) {
         if (!file_exists($path)) {
             return null;
         }
-
         return $_ENV['APP_URL'] . $path;
     }
 }
@@ -93,14 +86,11 @@ if (!function_exists('debug')) {
 if (!function_exists('slug')) {
     function slug($string, $separator = '-')
     {
-        // Chuyển đổi chuỗi sang chữ thường
         $string = mb_strtolower($string, 'UTF-8');
 
-        // Thay thế các ký tự đặc biệt và dấu tiếng Việt
         $string = preg_replace('/[^\p{L}\p{N}\s]/u', '', $string);
         $string = preg_replace('/[\s]+/', $separator, $string);
 
-        // Loại bỏ các ký tự phân cách ở đầu và cuối chuỗi
         $string = trim($string, $separator) . '-' . random_string(6);
 
         return $string;
@@ -110,12 +100,13 @@ if (!function_exists('slug')) {
 if (!function_exists('random_string')) {
     function random_string($length = 10)
     {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
+
         return $randomString;
     }
 }
